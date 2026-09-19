@@ -6,20 +6,39 @@
     <title>Gustavo Cerati | Músico y compositor</title>
     <meta name="description" content="Conoce la música, trayectoria y discografía de Gustavo Cerati, músico y compositor argentino.">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Datos estructurados para buscadores y herramientas de IA -->
+    <!-- Datos estructurados del artista y de sus obras -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gustavo Cerati",
-        "jobTitle": "Músico, compositor y productor",
-        "description": "Músico argentino cuya obra reúne rock, pop, electrónica y exploración sonora.",
-        "url": "https://ejemplo.com",
-        "image": "https://ejemplo.com/assets/artista-retrato.jpg",
-        "sameAs": [
-          "https://www.instagram.com/ejemplo",
-          "https://www.youtube.com/@ejemplo"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "#gustavo-cerati",
+            "name": "Gustavo Cerati",
+            "jobTitle": "Músico, compositor y productor",
+            "description": "Músico argentino cuya obra reúne rock, pop, electrónica y exploración sonora.",
+            "image": "assets/artista-retrato.jpg",
+            "hasOccupation": {
+              "@type": "Occupation",
+              "name": "Músico, compositor y productor"
+            }
+          },
+          {
+            "@type": "MusicAlbum",
+            "name": "Bocanada",
+            "datePublished": "1999",
+            "byArtist": { "@id": "#gustavo-cerati" },
+            "description": "Un viaje entre samplers, guitarras y melodías que redefinió su sonido solista."
+          },
+          {
+            "@type": "MusicAlbum",
+            "name": "Ahí Vamos",
+            "datePublished": "2006",
+            "byArtist": { "@id": "#gustavo-cerati" },
+            "description": "Un regreso eléctrico, directo y poderoso que conectó con una nueva generación."
+          }
         ]
       }
     </script>
@@ -51,7 +70,7 @@
         <img src="assets/artista-retrato.jpg" alt="Retrato artístico que acompaña la página dedicada a Gustavo Cerati" width="640" height="800">
       </section>
 
-      <section id="sobre-mi" class="section" aria-labelledby="sobre-mi-title">
+      <section id="sobre-mi" class="section border border-[#3f514b] shadow-[0_0_0_1px_rgba(211,154,93,0.12)]" aria-labelledby="sobre-mi-title">
         <div class="section__heading">
           <p class="eyebrow">La persona detrás de la obra</p>
           <h2 id="sobre-mi-title">Sobre mí</h2>
@@ -62,7 +81,7 @@
         </div>
       </section>
 
-      <section id="trayectoria" class="section section--dark" aria-labelledby="trayectoria-title">
+      <section id="trayectoria" class="section section--dark border border-[#40504b] shadow-[0_0_0_1px_rgba(211,154,93,0.18)]" aria-labelledby="trayectoria-title">
         <div class="section__heading">
           <p class="eyebrow">Un recorrido en canciones</p>
           <h2 id="trayectoria-title">Trayectoria</h2>
@@ -83,50 +102,50 @@
         </ol>
       </section>
 
-      <section id="galeria" class="section" aria-labelledby="galeria-title">
+      <section id="galeria" class="section border border-[#3f514b] shadow-[0_0_0_1px_rgba(211,154,93,0.12)]" aria-labelledby="galeria-title">
         <div class="section__heading">
           <p class="eyebrow">Archivo visual</p>
           <h2 id="galeria-title">Galería</h2>
         </div>
         <div class="gallery-grid">
-          <figure class="gallery-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Concierto_Gustavo_Cerati_%284121371286%29.jpg" alt="Gustavo Cerati durante un concierto" loading="lazy">
+          <figure class="gallery-item border border-[#40504b] shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-2">
+            <img class="transition duration-500 hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Concierto_Gustavo_Cerati_%284121371286%29.jpg" alt="Gustavo Cerati durante un concierto" loading="lazy">
             <figcaption>Concierto de Gustavo Cerati · <a href="https://commons.wikimedia.org/wiki/File:Concierto_Gustavo_Cerati_(4121371286).jpg">CC BY 2.0</a></figcaption>
           </figure>
-          <figure class="gallery-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Gustavo_Cerati%2C_Madrid%2C_2006.10.10.jpg" alt="Gustavo Cerati en Madrid en 2006" loading="lazy">
+          <figure class="gallery-item border border-[#40504b] shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-2">
+            <img class="transition duration-500 hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Gustavo_Cerati%2C_Madrid%2C_2006.10.10.jpg" alt="Gustavo Cerati en Madrid en 2006" loading="lazy">
             <figcaption>Madrid, 2006 · <a href="https://commons.wikimedia.org/wiki/File:Gustavo_Cerati,_Madrid,_2006.10.10.jpg">CC BY-SA 3.0</a></figcaption>
           </figure>
-          <figure class="gallery-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Gustavo_Cerati.jpg" alt="Retrato de Gustavo Cerati" loading="lazy">
+          <figure class="gallery-item border border-[#40504b] shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-2">
+            <img class="transition duration-500 hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Gustavo_Cerati.jpg" alt="Retrato de Gustavo Cerati" loading="lazy">
             <figcaption>Retrato de Gustavo Cerati · <a href="https://commons.wikimedia.org/wiki/File:Gustavo_Cerati.jpg">Dominio público</a></figcaption>
           </figure>
         </div>
       </section>
 
-      <section id="discografia" class="section" aria-labelledby="discografia-title">
+      <section id="discografia" class="section border border-[#3f514b] shadow-[0_0_0_1px_rgba(211,154,93,0.12)]" aria-labelledby="discografia-title">
         <div class="section__heading">
           <p class="eyebrow">Álbumes esenciales</p>
           <h2 id="discografia-title">Discografía</h2>
         </div>
         <div class="event-grid">
-          <article class="event-card">
-            <p class="event-card__date"><time datetime="1999">1999</time></p>
-            <h3>Bocanada</h3>
-            <p>Un viaje entre samplers, guitarras y melodías que redefinió su sonido solista.</p>
+          <article class="event-card" itemscope itemtype="https://schema.org/MusicAlbum">
+            <p class="event-card__date"><time datetime="1999" itemprop="datePublished">1999</time></p>
+            <h3 itemprop="name">Bocanada</h3>
+            <p itemprop="description">Un viaje entre samplers, guitarras y melodías que redefinió su sonido solista.</p>
             <a href="https://es.wikipedia.org/wiki/Bocanada_(%C3%A1lbum)">Conocer el álbum</a>
           </article>
-          <article class="event-card">
-            <p class="event-card__date"><time datetime="2006">2006</time></p>
-            <h3>Ahí Vamos</h3>
-            <p>Un regreso eléctrico, directo y poderoso que conectó con una nueva generación.</p>
+          <article class="event-card" itemscope itemtype="https://schema.org/MusicAlbum">
+            <p class="event-card__date"><time datetime="2006" itemprop="datePublished">2006</time></p>
+            <h3 itemprop="name">Ahí Vamos</h3>
+            <p itemprop="description">Un regreso eléctrico, directo y poderoso que conectó con una nueva generación.</p>
             <a href="https://es.wikipedia.org/wiki/Ah%C3%AD_vamos">Conocer el álbum</a>
           </article>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" aria-label="Información del sitio">
       <p>© 2026 Sitio tributo a Gustavo Cerati.</p>
       <a href="https://commons.wikimedia.org/wiki/Category:Gustavo_Cerati">Créditos fotográficos</a>
     </footer>
